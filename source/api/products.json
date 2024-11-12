@@ -1,0 +1,261 @@
+{
+    "status": "success",
+    "message": "Sneaker data retrieved successfully",
+    "data": {
+      "sneakers": [
+        {
+          "id": 1,
+          "name": "Nike Air Max 90",
+          "description": "The Nike Air Max 90 features a classic design with a cushioned sole for comfort and style.",
+          "image": "/images/img1.jpg",
+          "brand": "Nike",
+          "model": "Air Max 90",
+          "price": 120.99,
+          "release_date": "2024-03-15",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 2,
+          "name": "Adidas Ultraboost 22",
+          "description": "The Adidas Ultraboost 22 provides superior cushioning and energy return for all-day comfort.",
+          "image": "/images/img2.jpg",
+          "brand": "Adidas",
+          "model": "Ultraboost 22",
+          "price": 180.50,
+          "release_date": "2024-04-01",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 3,
+          "name": "Puma RS-X3 Puzzle",
+          "description": "Puma's RS-X3 Puzzle offers bold, colorful design and a high-performance outsole for maximum comfort.",
+          "image": "/images/img3.jpg",
+          "brand": "Puma",
+          "model": "RS-X3 Puzzle",
+          "price": 110.00,
+          "release_date": "2024-02-20",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 4,
+          "name": "New Balance 574 Classic",
+          "description": "New Balance 574 Classic sneakers are known for their classic styling and comfortable fit.",
+          "image": "/images/img4.webp",
+          "brand": "New Balance",
+          "model": "574 Classic",
+          "price": 80.99,
+          "release_date": "2024-01-10",
+          "gender": ["Men"]
+        },
+        {
+          "id": 5,
+          "name": "Converse Chuck Taylor All Star",
+          "description": "The Converse Chuck Taylor All Star combines a timeless look with everyday comfort.",
+          "image": "/images/img5.jpg",
+          "brand": "Converse",
+          "model": "Chuck Taylor All Star",
+          "price": 60.00,
+          "release_date": "2023-12-01",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 6,
+          "name": "Nike Air Force 1",
+          "description": "Iconic and timeless, the Nike Air Force 1 is made for all-day wear with a comfortable and stylish fit.",
+          "image": "/images/img6.webp",
+          "brand": "Nike",
+          "model": "Air Force 1",
+          "price": 90.00,
+          "release_date": "2023-11-15",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 7,
+          "name": "Adidas NMD R1",
+          "description": "The Adidas NMD R1 offers sleek, modern styling with responsive cushioning for all-day comfort.",
+          "image": "/images/img7.jpg",
+          "brand": "Adidas",
+          "model": "NMD R1",
+          "price": 130.00,
+          "release_date": "2023-10-01",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 8,
+          "name": "Reebok Classic Leather",
+          "description": "The Reebok Classic Leather sneakers offer a retro look and feel with a sleek leather upper.",
+          "image": "/images/img8.webp",
+          "brand": "Reebok",
+          "model": "Classic Leather",
+          "price": 75.00,
+          "release_date": "2023-09-20",
+          "gender": ["Men"]
+        },
+        {
+          "id": 9,
+          "name": "Under Armour HOVR Phantom",
+          "description": "The HOVR Phantom by Under Armour provides incredible comfort and responsiveness with every step.",
+          "image": "/images/img9.webp",
+          "brand": "Under Armour",
+          "model": "HOVR Phantom",
+          "price": 160.00,
+          "release_date": "2023-08-15",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 10,
+          "name": "Saucony Jazz Original",
+          "description": "Saucony Jazz Originals are lightweight sneakers with a retro design, perfect for everyday wear.",
+          "image": "/images/img10.webp",
+          "brand": "Saucony",
+          "model": "Jazz Original",
+          "price": 65.00,
+          "release_date": "2023-07-25",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 11,
+          "name": "Nike React Element 55",
+          "description": "The Nike React Element 55 brings sleek design with lightweight cushioning and a responsive feel.",
+          "image": "/images/img11.webp",
+          "brand": "Nike",
+          "model": "React Element 55",
+          "price": 140.00,
+          "release_date": "2023-06-10",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 12,
+          "name": "Vans Old Skool",
+          "description": "The Vans Old Skool features the iconic side stripe and is perfect for both skateboarding and casual wear.",
+          "image": "/images/img12.jpg",
+          "brand": "Vans",
+          "model": "Old Skool",
+          "price": 60.00,
+          "release_date": "2023-05-01",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 13,
+          "name": "Asics Gel-Lyte III",
+          "description": "The Asics Gel-Lyte III offers superior cushioning and comfort with a stylish, retro design.",
+          "image": "/images/img13.webp",
+          "brand": "Asics",
+          "model": "Gel-Lyte III",
+          "price": 100.00,
+          "release_date": "2023-04-15",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 14,
+          "name": "Fila Disruptor 2",
+          "description": "Fila Disruptor 2 is known for its chunky design, combining retro aesthetics with modern comfort.",
+          "image": "/images/img14.webp",
+          "brand": "Fila",
+          "model": "Disruptor 2",
+          "price": 85.00,
+          "release_date": "2023-03-25",
+          "gender": ["Women"]
+        },
+        {
+          "id": 15,
+          "name": "Nike SB Dunk Low",
+          "description": "The Nike SB Dunk Low is built for skateboarding with a padded tongue and responsive cushioning.",
+          "image": "/images/img15.jpg",
+          "brand": "Nike",
+          "model": "SB Dunk Low",
+          "price": 100.00,
+          "release_date": "2023-02-10",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 16,
+          "name": "Adidas Yeezy Boost 350 V2",
+          "description": "The Adidas Yeezy Boost 350 V2 combines stylish design with unparalleled comfort and a prime knit upper.",
+          "image": "/images/img16.webp",
+          "brand": "Adidas",
+          "model": "Yeezy Boost 350 V2",
+          "price": 220.00,
+          "release_date": "2023-01-05",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 17,
+          "name": "Jordan 1 Retro High OG",
+          "description": "The Jordan 1 Retro High OG combines high-quality materials and classic design, perfect for sneakerheads.",
+          "image": "/images/img17.webp",
+          "brand": "Jordan",
+          "model": "1 Retro High OG",
+          "price": 170.00,
+          "release_date": "2022-12-15",
+          "gender": ["Men"]
+        },
+        {
+          "id": 18,
+          "name": "Nike Zoom Freak 5",
+          "description": "The Nike Zoom Freak 5 delivers superior traction and cushioning, designed for on-court performance.",
+          "image": "/images/img18.webp",
+          "brand": "Nike",
+          "model": "Zoom Freak 5",
+          "price": 160.00,
+          "release_date": "2022-11-25",
+          "gender": ["Men"]
+        },
+        {
+          "id": 19,
+          "name": "Adidas Originals Gazelle",
+          "description": "The Adidas Originals Gazelle brings classic styling with modern-day comfort.",
+          "image": "/images/img19.webp",
+          "brand": "Adidas",
+          "model": "Gazelle",
+          "price": 75.00,
+          "release_date": "2022-10-10",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 20,
+          "name": "Balenciaga Triple S",
+          "description": "The Balenciaga Triple S is known for its bulky silhouette and high-fashion, luxury design.",
+          "image": "/images/img20.jpg",
+          "brand": "Balenciaga",
+          "model": "Triple S",
+          "price": 900.00,
+          "release_date": "2022-09-15",
+          "gender": ["Men"]
+        },
+        {
+          "id": 21,
+          "name": "Nike Blazer Mid '77 Vintage",
+          "description": "The Nike Blazer Mid '77 Vintage offers a classic retro basketball look with modern-day comfort.",
+          "image": "/images/img21.jpg",
+          "brand": "Nike",
+          "model": "Blazer Mid '77 Vintage",
+          "price": 100.00,
+          "release_date": "2022-08-01",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 22,
+          "name": "Adidas Superstar",
+          "description": "The Adidas Superstar is a classic sneaker, known for its iconic shell toe and premium leather upper.",
+          "image": "/images/img22.jpg",
+          "brand": "Adidas",
+          "model": "Superstar",
+          "price": 85.00,
+          "release_date": "2022-07-10",
+          "gender": ["Men", "Women"]
+        },
+        {
+          "id": 23,
+          "name": "Vans Sk8-Hi",
+          "description": "The Vans Sk8-Hi offers durable canvas with the iconic high-top silhouette for style and comfort.",
+          "image": "/images/img23.jpg",
+          "brand": "Vans",
+          "model": "Sk8-Hi",
+          "price": 70.00,
+          "release_date": "2022-06-01",
+          "gender": ["Men", "Women"]
+        }
+      ]
+    }
+  }
