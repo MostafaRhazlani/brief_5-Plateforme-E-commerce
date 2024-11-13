@@ -2,6 +2,7 @@ const recommendedList = document.getElementById('recommended-list');
 const favoriteList = document.getElementById('favorite-list-items');
 const alerts = document.getElementById('alerts');
 let dataList;
+let pageNumber = 0;
 let favItems = [];
 
 
@@ -65,11 +66,8 @@ fetch('/source/api/products.json')
         i++;
     }
 
-    console.log(localStorage.favList);
-    console.log(favItems);
-
-    updateFavoriteList();
     updatePagesCount();
+    updateFavoriteList(pageNumber);
 })
 .catch(error => console.log(error));
 
@@ -87,6 +85,9 @@ function addToFavorite() {
         localStorage.setItem('favList', `-${id}${localStorage.getItem('favList')}`)
         favItems.unshift(id);
         createAlert(name, 'Added to favorite');
+        pageNumber = 0;
+        updatePagesCount();
+        updateFavoriteList()
     } else {
         this.classList.remove('added-fav');
         this.innerHTML = 
@@ -96,9 +97,10 @@ function addToFavorite() {
         localStorage.setItem('favList', localStorage.getItem('favList').replace('-' + id + '-', '-'))
         favItems.splice(favItems.indexOf(id), 1);
         createAlert(name, 'Removed from favorite');
+        updatePagesCount();
+        updateFavoriteList(pageNumber)
     }
-    updateFavoriteList()
-    updatePagesCount();
+    
 }
 
 function updateFavoriteList(page = 0) {
@@ -147,15 +149,13 @@ function updateFavoriteList(page = 0) {
         div.querySelector('.fav-icon').addEventListener('click', function () {
             div.style.opacity = 0;
             createAlert(div.querySelector('.name').textContent, 'Remove from favorite');
-            console.log(div.dataset.id);
             localStorage.setItem('favList', localStorage.getItem('favList').replace('-' + div.dataset.id + '-', '-'));
             favItems.splice(favItems.indexOf(div.dataset.id), 1);
-            console.log(favItems);
             this.remove();
             setTimeout(() => {
                 div.remove();
-                updateFavoriteList()
                 updatePagesCount();
+                updateFavoriteList(pageNumber)
             }, 480)
         });
 
@@ -181,15 +181,6 @@ function createAlert(title, msg) {
 }
 
 let pagination = document.getElementById('pagination');
-// for (let item of pages) {
-//     item.addEventListener('click', function () {
-//         for (let page of pages) {
-//             page.classList.remove('active', 'bg-teal-200', 'border-teal-600');
-//         }
-//         this.classList.add('active', 'bg-teal-200', 'border-teal-600');
-//         updateFavoriteList(item.textContent.trim() - 1);
-//     });
-// }
 
 function updatePagesCount() {
     pagination.innerHTML = '';
@@ -208,10 +199,12 @@ function updatePagesCount() {
                 page.classList.remove('active', 'bg-teal-200', 'border-teal-600');
             }
             this.classList.add('active', 'bg-teal-200', 'border-teal-600');
+            pageNumber = button.textContent.trim() - 1;
             updateFavoriteList(button.textContent.trim() - 1);
         });
     }
     if (pagesCount > 1) {
-        pagination.firstElementChild.classList.add('active', 'border-teal-600', 'bg-teal-200');
+        pageNumber = pageNumber + 1 == pagesCount ? pagesCount - 2: pageNumber;
+        pagination.children[pageNumber].classList.add('active', 'border-teal-600', 'bg-teal-200');
     }
 }
