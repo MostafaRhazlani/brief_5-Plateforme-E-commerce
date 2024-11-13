@@ -5,242 +5,727 @@
       "sneakers": [
         {
           "id": 1,
-          "name": "Nike Air Max 90",
-          "description": "The Nike Air Max 90 features a classic design with a cushioned sole for comfort and style.",
-          "image": "/source/api/Images/img1.jpg",
+          "name": "Nike Air Max 95",
+          "description": "The  Nike Air Max 95 features a classic design with a cushioned sole for comfort and style.",
+          "image": "/source/api/Images/Nike Air Max 95/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Air Max 95/Color1/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max 95/Color1/side1.png",
+                "/source/api/Images/Nike Air Max 95/Color1/side2.png",
+                "/source/api/Images/Nike Air Max 95/Color1/side3.png",
+                "/source/api/Images/Nike Air Max 95/Color1/side4.png",
+                "/source/api/Images/Nike Air Max 95/Color1/side5.png",
+                "/source/api/Images/Nike Air Max 95/Color1/side6.png"
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Max 95/Color2/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max 95/Color2/side1.png",
+                "/source/api/Images/Nike Air Max 95/Color2/side2.png",
+                "/source/api/Images/Nike Air Max 95/Color2/side3.png",
+                "/source/api/Images/Nike Air Max 95/Color2/side4.png",
+                "/source/api/Images/Nike Air Max 95/Color2/side5.png",
+                "/source/api/Images/Nike Air Max 95/Color2/side6.png"
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Max 95/Color3/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max 95/Color3/side1.png",
+                "/source/api/Images/Nike Air Max 95/Color3/side2.png",
+                "/source/api/Images/Nike Air Max 95/Color3/side3.png",
+                "/source/api/Images/Nike Air Max 95/Color3/side4.png",
+                "/source/api/Images/Nike Air Max 95/Color3/side5.png",
+                "/source/api/Images/Nike Air Max 95/Color3/side6.png"
+              ]
+            }
+          ],
           "brand": "Nike",
-          "model": "Air Max 90",
+          "model": "Air Max 95",
           "price": 120.99,
           "release_date": "2024-03-15",
           "gender": ["Men", "Women"]
         },
         {
           "id": 2,
-          "name": "Adidas Ultraboost 22",
-          "description": "The Adidas Ultraboost 22 provides superior cushioning and energy return for all-day comfort.",
-          "image": "/source/api/Images/img2.jpg",
-          "brand": "Adidas",
-          "model": "Ultraboost 22",
+          "name": "Nike Air Max Plus",
+          "description": "The Nike Air Max Plus provides superior cushioning and energy return for all-day comfort.",
+          "image": "/source/api/Images/Nike Air Max Plus/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Air Max Plus/Color1/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max Plus/Color1/side1.png",
+                "/source/api/Images/Nike Air Max Plus/Color1/side2.png",
+                "/source/api/Images/Nike Air Max Plus/Color1/side3.png",
+                "/source/api/Images/Nike Air Max Plus/Color1/side4.png",
+                "/source/api/Images/Nike Air Max Plus/Color1/side5.png",
+                "/source/api/Images/Nike Air Max Plus/Color1/side6.png"
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Max Plus/Color2/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max Plus/Color2/side1.png",
+                "/source/api/Images/Nike Air Max Plus/Color2/side2.png",
+                "/source/api/Images/Nike Air Max Plus/Color2/side3.png",
+                "/source/api/Images/Nike Air Max Plus/Color2/side4.png",
+                "/source/api/Images/Nike Air Max Plus/Color2/side5.png",
+                "/source/api/Images/Nike Air Max Plus/Color2/side6.png"
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Max Plus/Color3/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max Plus/Color3/side1.png",
+                "/source/api/Images/Nike Air Max Plus/Color3/side2.png",
+                "/source/api/Images/Nike Air Max Plus/Color3/side3.png",
+                "/source/api/Images/Nike Air Max Plus/Color3/side4.png",
+                "/source/api/Images/Nike Air Max Plus/Color3/side5.png",
+                "/source/api/Images/Nike Air Max Plus/Color3/side6.png"
+              ]
+            }
+          ],
+          "brand": "Nike",
+          "model": "Air Max Plus",
           "price": 180.59,
           "release_date": "2024-04-01",
           "gender": ["Men", "Women"]
         },
         {
           "id": 3,
-          "name": "Puma RS-X3 Puzzle",
-          "description": "Puma's RS-X3 Puzzle offers bold, colorful design and a high-performance outsole for maximum comfort.",
-          "image": "/source/api/Images/img3.jpg",
-          "brand": "Puma",
-          "model": "RS-X3 Puzzle",
+          "name": "Nike Air Max SC",
+          "description": "Nike Air Max SC offers bold, colorful design and a high-performance outsole for maximum comfort.",
+          "image": "/source/api/Images/Nike Air Max SC/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Air Max SC/Color1/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max SC/Color1/side1.png",
+                "/source/api/Images/Nike Air Max SC/Color1/side2.png",
+                "/source/api/Images/Nike Air Max SC/Color1/side3.png",
+                "/source/api/Images/Nike Air Max SC/Color1/side4.png",
+                "/source/api/Images/Nike Air Max SC/Color1/side5.png",
+                "/source/api/Images/Nike Air Max SC/Color1/side6.png"
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Max SC/Color2/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max SC/Color2/side1.png",
+                "/source/api/Images/Nike Air Max SC/Color2/side2.png",
+                "/source/api/Images/Nike Air Max SC/Color2/side3.png",
+                "/source/api/Images/Nike Air Max SC/Color2/side4.png",
+                "/source/api/Images/Nike Air Max SC/Color2/side5.png",
+                "/source/api/Images/Nike Air Max SC/Color2/side6.png"
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Max SC/Color3/Main Image.png",
+              "Images": [
+                "/source/api/Images/Nike Air Max SC/Color3/side1.png",
+                "/source/api/Images/Nike Air Max SC/Color3/side2.png",
+                "/source/api/Images/Nike Air Max SC/Color3/side3.png",
+                "/source/api/Images/Nike Air Max SC/Color3/side4.png",
+                "/source/api/Images/Nike Air Max SC/Color3/side5.png",
+                "/source/api/Images/Nike Air Max SC/Color3/side6.png"
+              ]
+            }
+          ],
+          "brand": "Nike",
+          "model": "Air Max SC",
           "price": 110.99,
           "release_date": "2024-02-20",
           "gender": ["Men", "Women"]
         },
         {
           "id": 4,
-          "name": "New Balance 574 Classic",
-          "description": "New Balance 574 Classic sneakers are known for their classic styling and comfortable fit.",
-          "image": "/source/api/Images/img4.webp",
-          "brand": "New Balance",
-          "model": "574 Classic",
+          "name": "Adidas Cobra",
+          "description": "Adidas Cobra sneakers are known for their classic styling and comfortable fit.",
+          "image": "/source/api/Images/Adidas Cobra/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Adidas Cobra/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Adidas Cobra/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Adidas Cobra/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Adidas",
+          "model": "Cobra",
           "price": 80.99,
           "release_date": "2024-01-10",
           "gender": ["Men", "Women"]
         },
         {
           "id": 5,
-          "name": "Converse Chuck Taylor All Star",
-          "description": "The Converse Chuck Taylor All Star combines a timeless look with everyday comfort.",
-          "image": "/source/api/Images/img5.jpg",
-          "brand": "Converse",
-          "model": "Chuck Taylor All Star",
+          "name": "Adidas Zoom Vomero 5",
+          "description": "The Adidas Zoom Vomero 5 All Star combines a timeless look with everyday comfort.",
+          "image": "/source/api/Images/Adidas Zoom Vomero 5/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Adidas Zoom Vomero 5/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Adidas Zoom Vomero 5/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Adidas Zoom Vomero 5/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Adidas",
+          "model": "Zoom Vomero 5",
           "price": 60.99,
           "release_date": "2023-12-01",
           "gender": ["Men", "Women"]
         },
         {
           "id": 6,
-          "name": "Nike Air Force 1",
-          "description": "Iconic and timeless, the Nike Air Force 1 is made for all-day wear with a comfortable and stylish fit.",
-          "image": "/source/api/Images/img6.webp",
-          "brand": "Nike",
-          "model": "Air Force 1",
+          "name": "Fila G.T. HUSTLE ACADEMY",
+          "description": "Iconic and timeless, the Fila G.T. HUSTLE ACADEMY is made for all-day wear with a comfortable and stylish fit.",
+          "image": "/source/api/Images/Fila G.T. HUSTLE ACADEMY/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Fila G.T. HUSTLE ACADEMY/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Fila G.T. HUSTLE ACADEMY/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Fila G.T. HUSTLE ACADEMY/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Fila",
+          "model": "G.T. HUSTLE ACADEMY",
           "price": 90.99,
           "release_date": "2023-11-15",
           "gender": ["Men", "Women"]
         },
         {
           "id": 7,
-          "name": "Adidas NMD R1",
-          "description": "The Adidas NMD R1 offers sleek, modern styling with responsive cushioning for all-day comfort.",
-          "image": "/source/api/Images/img7.jpg",
-          "brand": "Adidas",
-          "model": "NMD R1",
+          "name": "Jordan Air Jordan",
+          "description": "The Jordan Air Jordan offers sleek, modern styling with responsive cushioning for all-day comfort.",
+          "image": "/source/api/Images/Jordan Air Jordan/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Jordan Air Jordan/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Jordan Air Jordan/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Jordan Air Jordan/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Jordan",
+          "model": "Air Jordan",
           "price": 130.99,
           "release_date": "2023-10-01",
           "gender": ["Men", "Women"]
         },
         {
           "id": 8,
-          "name": "Reebok Classic Leather",
-          "description": "The Reebok Classic Leather sneakers offer a retro look and feel with a sleek leather upper.",
-          "image": "/source/api/Images/img8.webp",
-          "brand": "Reebok",
-          "model": "Classic Leather",
+          "name": "Jordan Max DN",
+          "description": "The Jordan Max DN sneakers offer a retro look and feel with a sleek leather upper.",
+          "image": "/source/api/Images/Jordan Max DN/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Jordan Max DN/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Jordan Max DN/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Jordan Max DN/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Jordan",
+          "model": "Max DN",
           "price": 75.99,
           "release_date": "2023-09-20",
           "gender": ["Men"]
         },
         {
           "id": 9,
-          "name": "Under Armour HOVR Phantom",
-          "description": "The HOVR Phantom by Under Armour provides incredible comfort and responsiveness",
-          "image": "/source/api/Images/img9.webp",
-          "brand": "Under Armour",
-          "model": "HOVR Phantom",
+          "name": "Reebok Air 95",
+          "description": "The Air 95 by Reebok provides incredible comfort and responsiveness",
+          "image": "/source/api/Images/Reebok Air 95/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Reebok Air 95/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Reebok Air 95/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Reebok Air 95/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Reebok",
+          "model": "Air 95",
           "price": 160.99,
           "release_date": "2023-08-15",
           "gender": ["Men", "Women"]
         },
         {
           "id": 10,
-          "name": "Saucony Jazz Original",
-          "description": "Saucony Jazz Originals are lightweight sneakers with a retro design, perfect for everyday wear.",
-          "image": "/source/api/Images/img10.webp",
-          "brand": "Saucony",
-          "model": "Jazz Original",
+          "name": "Reebok Air Dunk Low",
+          "description": "Reebok Air Dunk Lows are lightweight sneakers with a retro design, perfect for everyday wear.",
+          "image": "/source/api/Images/Reebok Air Dunk Low/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Reebok Air Dunk Low/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Reebok Air Dunk Low/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Reebok Air Dunk Low/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Reebok",
+          "model": "Air Dunk Low",
           "price": 65.99,
           "release_date": "2023-07-25",
           "gender": ["Men", "Women"]
         },
         {
           "id": 11,
-          "name": "Nike React Element 55",
-          "description": "The Nike React Element 55 brings sleek design with lightweight cushioning and a responsive feel.",
-          "image": "/source/api/Images/img11.webp",
+          "name": "Nike Air L56",
+          "description": "The Nike Air L56 brings sleek design with lightweight cushioning and a responsive feel.",
+          "image": "/source/api/Images/Nike Air L56/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Air L56/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air L56/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air L56/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
           "brand": "Nike",
-          "model": "React Element 55",
+          "model": "Air L56",
           "price": 140.99,
           "release_date": "2023-06-10",
           "gender": ["Men", "Women"]
         },
         {
           "id": 12,
-          "name": "Vans Old Skool",
-          "description": "The Vans Old Skool features the iconic side stripe and is perfect for both skateboarding and casual wear.",
-          "image": "/source/api/Images/img12.jpg",
-          "brand": "Vans",
-          "model": "Old Skool",
+          "name": "Nike Air Nike Off",
+          "description": "The Nike Air Nike Off features the iconic side stripe and is perfect for both skateboarding and casual wear.",
+          "image": "/source/api/Images/Nike Air Nike Off/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Air Nike Off/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Nike Off/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Air Nike Off/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Nike",
+          "model": "Air Nike Off",
           "price": 60.99,
           "release_date": "2023-05-01",
           "gender": ["Men", "Women"]
         },
         {
           "id": 13,
-          "name": "Asics Gel-Lyte III",
-          "description": "The Asics Gel-Lyte III offers superior cushioning and comfort with a stylish, retro design.",
-          "image": "/source/api/Images/img13.webp",
-          "brand": "Asics",
-          "model": "Gel-Lyte III",
+          "name": "Vans Dunk Low Twist",
+          "description": "The Vans Dunk Low Twist offers superior cushioning and comfort with a stylish, retro design.",
+          "image": "/source/api/Images/Vans Dunk Low Twist/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Vans Dunk Low Twist/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Vans Dunk Low Twist/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Vans Dunk Low Twist/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Vans",
+          "model": "Dunk Low Twist",
           "price": 100.99,
           "release_date": "2023-04-15",
           "gender": ["Men", "Women"]
         },
         {
           "id": 14,
-          "name": "Fila Disruptor 2",
-          "description": "Fila Disruptor 2 is known for its chunky design, combining retro aesthetics with modern comfort.",
-          "image": "/source/api/Images/img14.webp",
-          "brand": "Fila",
-          "model": "Disruptor 2",
+          "name": "Nike G.T. Hustle Academy",
+          "description": "Nike G.T. Hustle Academy is known for its chunky design, combining retro aesthetics with modern comfort.",
+          "image": "/source/api/Images/Nike G.T. Hustle Academy/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike G.T. Hustle Academy/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike G.T. Hustle Academy/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike G.T. Hustle Academy/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Nike",
+          "model": "G.T. Hustle Academy",
           "price": 85.99,
           "release_date": "2023-03-25",
           "gender": ["Men"]
         },
         {
           "id": 15,
-          "name": "Nike SB Dunk Low",
-          "description": "The Nike SB Dunk Low is built for skateboarding with a padded tongue and responsive cushioning.",
-          "image": "/source/api/Images/img15.jpg",
-          "brand": "Nike",
-          "model": "SB Dunk Low",
+          "name": "Puma Flat S",
+          "description": "The Puma Flat S is built for skateboarding with a padded tongue and responsive cushioning.",
+          "image": "/source/api/Images/Puma Flat S/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Puma Flat S/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Puma Flat S/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Puma Flat S/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Puma",
+          "model": "Flat S",
           "price": 100.99,
           "release_date": "2023-02-10",
           "gender": ["Men", "Women"]
         },
         {
           "id": 16,
-          "name": "Adidas Yeezy Boost 350 V2",
-          "description": "The Adidas Yeezy Boost 350 V2 combines stylish design with unparalleled comfort and a prime knit",
-          "image": "/source/api/Images/img16.webp",
-          "brand": "Adidas",
-          "model": "Yeezy Boost 350 V2",
+          "name": "Puma Sander",
+          "description": "The Puma Sander combines stylish design with unparalleled comfort and a prime knit",
+          "image": "/source/api/Images/Puma Sander/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Puma Sander/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Puma Sander/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Puma Sander/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Puma",
+          "model": "Sander",
           "price": 220.99,
           "release_date": "2023-01-05",
           "gender": ["Men", "Women"]
         },
         {
           "id": 17,
-          "name": "Jordan 1 Retro High OG",
-          "description": "The Jordan 1 Retro High OG combines high-quality materials and classic design",
-          "image": "/source/api/Images/img17.webp",
-          "brand": "Jordan",
-          "model": "1 Retro High OG",
+          "name": "Puma V2K RUN2",
+          "description": "The Puma V2K RUN2 combines high-quality materials and classic design",
+          "image": "/source/api/Images/Puma V2K RUN2/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Puma V2K RUN2/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Puma V2K RUN2/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Puma V2K RUN2/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Puma",
+          "model": "V2K RUN2",
           "price": 170.99,
           "release_date": "2022-12-15",
           "gender": ["Men"]
         },
         {
           "id": 18,
-          "name": "Nike Zoom Freak 5",
-          "description": "The Nike Zoom Freak 5 delivers superior traction and cushioning, designed for on-court performance.",
-          "image": "/source/api/Images/img18.webp",
-          "brand": "Nike",
-          "model": "Zoom Freak 5",
+          "name": "Adidas Dunk Low",
+          "description": "The Adidas Dunk Low delivers superior traction and cushioning, designed for on-court performance.",
+          "image": "/source/api/Images/Adidas Dunk Low/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Adidas Dunk Low/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Adidas Dunk Low/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Adidas Dunk Low/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Adidas",
+          "model": "Dunk Low",
           "price": 160.99,
           "release_date": "2022-11-25",
           "gender": ["Men"]
         },
         {
           "id": 19,
-          "name": "Adidas Originals Gazelle",
-          "description": "The Adidas Originals Gazelle brings classic styling with modern-day comfort.",
-          "image": "/source/api/Images/img19.webp",
-          "brand": "Adidas",
-          "model": "Gazelle",
+          "name": "Jordan Flat Legacy",
+          "description": "The Jordan Flat Legacy brings classic styling with modern-day comfort.",
+          "image": "/source/api/Images/Jordan Flat Legacy/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Jordan Flat Legacy/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Jordan Flat Legacy/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Jordan Flat Legacy/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Jordan",
+          "model": "Flat Legacy",
           "price": 75.99,
           "release_date": "2022-10-10",
           "gender": ["Women"]
         },
         {
           "id": 20,
-          "name": "Balenciaga Triple S",
-          "description": "The Balenciaga Triple S is known for its bulky silhouette and high-fashion, luxury design.",
-          "image": "/source/api/Images/img20.jpg",
-          "brand": "Balenciaga",
-          "model": "Triple S",
+          "name": "Nike Court Vision MID WNTR",
+          "description": "The Nike Court Vision MID WNTR is known for its bulky silhouette and high-fashion, luxury design.",
+          "image": "/source/api/Images/Nike Court Vision MID WNTR/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Court Vision MID WNTR/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Court Vision MID WNTR/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Court Vision MID WNTR/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Nike",
+          "model": "Court Vision MID WNTR",
           "price": 900.99,
           "release_date": "2022-09-15",
           "gender": ["Men"]
         },
         {
           "id": 21,
-          "name": "Nike Blazer Mid '77 Vintage",
-          "description": "The Nike Blazer Mid '77 Vintage offers a classic retro basketball look with modern-day comfort.",
-          "image": "/source/api/Images/img21.jpg",
+          "name": "Nike Dunk BG",
+          "description": "The Nike Dunk BG offers a classic retro basketball look with modern-day comfort.",
+          "image": "/source/api/Images/Nike Dunk BG/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Nike Dunk BG/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Dunk BG/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Nike Dunk BG/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
           "brand": "Nike",
-          "model": "Blazer Mid '77 Vintage",
+          "model": "Dunk BG",
           "price": 100.99,
           "release_date": "2022-08-01",
           "gender": ["Women"]
         },
         {
           "id": 22,
-          "name": "Adidas Superstar",
-          "description": "The Adidas Superstar is a classic sneaker, known for its iconic shell toe and premium leather upper.",
-          "image": "/source/api/Images/img22.jpg",
-          "brand": "Adidas",
-          "model": "Superstar",
+          "name": "Reebok V2K Run",
+          "description": "The Reebok V2K Run is a classic sneaker, known for its iconic shell toe and premium leather upper.",
+          "image": "/source/api/Images/Reebok V2K Run/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Reebok V2K Run/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Reebok V2K Run/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Reebok V2K Run/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
+          "brand": "Reebok",
+          "model": "V2K Run",
           "price": 85.99,
           "release_date": "2022-07-10",
           "gender": ["Men", "Women"]
@@ -249,7 +734,27 @@
           "id": 23,
           "name": "Vans Sk8-Hi",
           "description": "The Vans Sk8-Hi offers durable canvas with the iconic high-top silhouette for style and comfort.",
-          "image": "/source/api/Images/img23.jpg",
+          "image": "/source/api/Images/Vans Sk8-Hi/Color1/Main Image.png",
+          "sides": [
+            {
+              "main": "/source/api/Images/Vans Sk8-Hi/Color1/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Vans Sk8-Hi/Color2/Main Image.png",
+              "Images": [
+                
+              ]
+            },
+            {
+              "main": "/source/api/Images/Vans Sk8-Hi/Color3/Main Image.png",
+              "Images": [
+                
+              ]
+            }
+          ],
           "brand": "Vans",
           "model": "Sk8-Hi",
           "price": 70.99,
