@@ -1,6 +1,7 @@
-let card = document.getElementById("card")
-let left = document.getElementById("leftsc")
-let right = document.getElementById("rightsc")
+let card = document.getElementById("card");
+let left = document.getElementById("leftsc");
+let right = document.getElementById("rightsc");
+
 card.addEventListener("wheel",(evt)=>{
    
     card.scrollLeft += evt.deltaY;
@@ -25,3 +26,4 @@ window.addEventListener("load",()=>{
 
     })
 })
+
