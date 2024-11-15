@@ -12,10 +12,10 @@
             {
               "main": "/source/api/Images/Nike Air Max 95/Color1/Main Image.png",
               "Images": [
-                "/source/api/Images/Nike Air Max 95/Color1/side1.png",
-                "/source/api/Images/Nike Air Max 95/Color1/side2.png",
-                "/source/api/Images/Nike Air Max 95/Color1/side3.png",
-                "/source/api/Images/Nike Air Max 95/Color1/side4.png",
+                "/source/api/Images/Nike Air Max 95/Color1/Main Image.png",
+                "../source/api/Images/Nike Air Max 95/Color3/Side Views/Side4.png",
+                "../source/api/Images/Nike Air Max 95/Color3/Side Views/Side4.png",
+                "../source/api/Images/Nike Air Max 95/Color3/Side Views/Side4.png",
                 "/source/api/Images/Nike Air Max 95/Color1/side5.png",
                 "/source/api/Images/Nike Air Max 95/Color1/side6.png"
               ]
@@ -23,7 +23,7 @@
             {
               "main": "/source/api/Images/Nike Air Max 95/Color2/Main Image.png",
               "Images": [
-                "/source/api/Images/Nike Air Max 95/Color2/side1.png",
+                "/source/api/Images/Nike Air Max 95/Color1/Main Image.png",
                 "/source/api/Images/Nike Air Max 95/Color2/side2.png",
                 "/source/api/Images/Nike Air Max 95/Color2/side3.png",
                 "/source/api/Images/Nike Air Max 95/Color2/side4.png",
