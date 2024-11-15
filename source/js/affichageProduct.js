@@ -118,11 +118,15 @@ async function fetchProducts() {
             function shopCards() {
                 let card = ''
             
+                if (localCards.length == 0) {
+                    showCards.classList.remove('show')
+                    showCards.innerHTML = "";
+                    showCards.classList.add('hidden')
+                } else {
+                    showCards.classList.remove('hidden')
+                }
+                
                 products.forEach(product => {
-                    
-                    if (localCards.length == 0) {
-                        showCards.innerHTML = "";
-                    }
             
                     for (let i = 0; i < 4; i++) {
                         const element = localCards[i];

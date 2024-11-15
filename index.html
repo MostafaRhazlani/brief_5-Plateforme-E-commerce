@@ -13,7 +13,62 @@
 
 </head>
 <body class="bg-[#effffd]">
-    <div class="relative min-h-screen">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 text-white">
+        <div class="w-[92%] lg:w-[82%] mx-auto">
+            <div class="nav border-b border-gray-300">
+                <div class="hide-icon flex justify-between items-center">
+                    <!-- logo -->
+                    <a href="./index.html">
+                        <img id="changeImg" width="100px" src="./source/img/logo_shoes-removebg-preview.png" alt="">
+                    </a>
+    
+                    <!-- icons favorite, shop and user image but is hidden in desktop -->
+                    <div class="flex items-center">
+                        <div class="mr-10 lg:hidden">
+                            <span class="text-2xl mr-3 text-red-500"><i class="fa-solid fa-heart"></i></span>
+                            <span class="text-2xl relative">
+                                <span class="p-1 bg-red-600 absolute -right-1 rounded-full"></span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                        </div>
+                        <div class="toggle text-4xl lg:hidden">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- menu -->
+                <div class="menu flex">
+                    <ul class="text-lg font-medium">
+                        <li class="active p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="index.html">Home</a></li>
+                        <li class="p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="./pages/products.html">Products</a></li>
+                        <li class="p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="./pages/about.html">About</a></li>
+                        <li class="p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="./pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- icons too but is hidden in phone -->
+                <div class="hide-icon-mb flex items-center">
+                    <div>
+                        <span class="text-2xl mr-3 text-red-500 hover:scale-150 cursor-pointer"><i class="fa-solid fa-heart"></i></span>
+                        <span class="text-2xl relative cursor-pointer">
+                            <span class="p-1 bg-red-600 absolute -right-1 rounded-full"></span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                    </div>
+                    <div class="user-img h-14 w-14 border-4 border-teal-600 rounded-full ml-9 overflow-hidden">
+                        <a href="./pages/auth/login.html">
+                            <img src="./source/img/149071.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="min-h-screen">
         <!-- Video background -->
         <video class="w-full h-full object-cover absolute top-0 left-0 z-[-1]" autoplay loop muted playsinline>
             <source src="./source/img/img-page-home/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
@@ -21,59 +76,6 @@
         </video>
         
         <div class="w-[92%] lg:w-[82%] mx-auto h-screen text-white">
-
-            <!-- Header -->
-            <header>
-                <div class="nav border-b border-gray-300">
-                    <div class="hide-icon flex justify-between items-center">
-                        <!-- logo -->
-                        <a href="./index.html">
-                            <img width="100px" src="./source/img/logo_shoes-removebg-preview.png" alt="">
-                        </a>
-        
-                        <!-- icons favorite, shop and user image but is hidden in desktop -->
-                        <div class="flex items-center">
-                            <div class="mr-10 lg:hidden">
-                                <span class="text-2xl mr-3 text-red-500"><i class="fa-solid fa-heart"></i></span>
-                                <span class="text-2xl relative">
-                                    <span class="p-1 bg-red-600 absolute -right-1 rounded-full"></span>
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </span>
-                            </div>
-                            <div class="toggle text-4xl lg:hidden">
-                                <i class="fa-solid fa-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- menu -->
-                    <div class="menu flex">
-                        <ul class="text-lg font-medium">
-                            <li class="active p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="index.html">Home</a></li>
-                            <li class="p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="./pages/products.html">Products</a></li>
-                            <li class="p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="./pages/about.html">About</a></li>
-                            <li class="p-1 hover:text-teal-600 transition-all hover:transition-all rounded w-full"><a href="./pages/contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-        
-                    <!-- icons too but is hidden in phone -->
-                    <div class="hide-icon-mb flex items-center">
-                        <div>
-                            <span class="text-2xl mr-3 text-red-500 hover:scale-150 cursor-pointer"><i class="fa-solid fa-heart"></i></span>
-                            <span class="text-2xl relative cursor-pointer">
-                                <span class="p-1 bg-red-600 absolute -right-1 rounded-full"></span>
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </span>
-                        </div>
-                        <a href="./pages/auth/login.html">
-                            <div class="user-img h-14 w-14 border-4 border-teal-600 rounded-full ml-9 overflow-hidden">
-                                <img src="./source/img/149071.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </header>
-
             <!-- Section Hero -->
             <section class="mt-20 lg:mt-36 relative z-[1]">
                 <div class="h-5/6 flex flex-col items-center justify-center">
@@ -86,7 +88,7 @@
                         Shop now and step into the perfect pair that 
                         suits your style and needs!
                     </p>
-                    <a class="px-12 py-3 bg-teal-600 rounded-full text-lg font-semibold transition-all drop-shadow-md hover:bg-teal-500 hover:transition-all" href="">Shop Now</a>
+                    <a class="px-12 py-3 bg-teal-600 rounded-full text-lg font-semibold transition-all drop-shadow-md hover:bg-teal-500 hover:transition-all" href="./pages/products.html">Shop Now</a>
                     
                     <div class="text-3xl flex mt-10">
                         <a class="mr-4 hover:scale-110 transition-all hover:transition-all" href="#">
@@ -277,5 +279,6 @@
     </div>
 
     <script src="./source/js/main.js"></script>
+    <script src="./source/js/scrollHeader.js"></script>
 </body>
 </html>
