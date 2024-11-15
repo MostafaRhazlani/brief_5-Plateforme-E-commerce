@@ -1,5 +1,6 @@
 .show-cards {
     position: fixed;
+    top: 13%;
     right: 0;
     transform: translateX(100%);
     transition: all 0.5s;
