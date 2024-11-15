@@ -145,7 +145,7 @@
               </h1>
             </div>
             <button
-              class="mt-[-150px] lg:h-12 jjj font-medium w-[100%] text-2xl text-slate-100 h-16 rounded-[40px] transition-all duration-[300ms] hover:bg-teal-800 hover:text-stone-200 hover:scale-[1.03]"
+              class="mt-[-150px] lg:m-[380px_0_100px_-460px] lg:w-[350px] lg:h-12 jjj font-medium w-[100%] text-2xl text-slate-100 h-16 rounded-[40px] transition-all duration-[300ms] hover:bg-teal-800 hover:text-stone-200 hover:scale-[1.03]"
             ><a href="#serchpage">Shop Now</a>
               
             </button>
@@ -283,30 +283,30 @@
           class="h-auto lkml grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[30%_30%_30%] gap-10 justify-center mt-5 " id="Prudacts"
         >
           
-        <div class="bg-white mb-5 h-[300px] rounded-[20px] title-4 klklk">
+        <div class="w-full mx-auto bg-white rounded-[20px] title-4 py-7 px-3 shadow-lg">
           <div
             class="grid grid-cols-[20%_60%_20%] grid-rows-[140px] bg-white rounded-[20px]"
           >
             <div class="flex flex-col justify-around items-center">
               <img id="img"
-                src="../source/img/AIR+MAX+CONTACT.png"
-                class="rotate-[-45deg] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
+                src="${product.image}"
+                class="rotate-[-45deg] w-[80%] transition-all duration-[200ms] cursor-pointer lg:hover:scale-[1.05] scale-[0.75] lg:scale-[0.75] hover:scale-[0.9]"
                 alt=""
               />
               <img id="img"
-                src="../source/img/AIR+MAX+CONTACT.png"
-                class="rotate-[-45deg] translate-y-[-5px] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
+                src="${product.image}"
+                class="rotate-[-45deg] translate-y-[-5px] w-[80%] transition-all duration-[200ms] cursor-pointer lg:hover:scale-[1.05] scale-[0.75] lg:scale-[0.75] hover:scale-[0.9]"
                 alt=""
               />
               <img id="img"
-                src="../source/img/AIRMAXDN_GS_-removebg-preview.png"
-                class="rotate-[-45deg] translate-y-[-15px] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
+                src="${product.image}"
+                class="rotate-[-45deg] translate-y-[-15px] w-[80%] transition-all duration-[200ms] cursor-pointer lg:hover:scale-[1.05] scale-[0.75] lg:scale-[0.75] hover:scale-[0.9]"
                 alt=""
               />
             </div>
-            <div class="">
+            <div class="scale-[0.75] lg:scale-[1]">
               <img id="img"
-                src="../source/img/AIRMAXDN_GS_-removebg-preview.png"
+                src="${product.image}"
                 class="rotate-[-45deg] translate-x-[-10px] translate-y-[-30px] w-[95%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
                 alt=""
               />
@@ -317,7 +317,7 @@
               ></i>
             </div>
           </div>
-          <h2 class="font-sans font-bold text-center" >Nike Air Max 90</h2>
+          <h2 class="mt-32 lg:mt-0 lg:font-sans font-bold text-center" id="filtr">${product.name}</h2>
           <div class="flex justify-between mt-4">
             <h3 class="ml-3 text-gray-500" id="unit">1 UNIT</h3>
             <a id="rating" href="" class="flex font-bold justify-around mr-3"
@@ -326,32 +326,32 @@
                 src="../source/img/Plain_Yellow_Star.png"
                 alt=""
               />
-              4.6</a
+              ${product.rating}</a
             >
           </div>
-          <div class="ml-3 font-sans font-medium mt-2" id="price">$80.20</div>
-          <div class="opps flex justify-between items-center mt-3">
+          <div class="ml-3 font-sans font-medium mt-2" id="price">$${product.price}</div>
+          <div class="flex justify-between items-center mt-3">
             <div class="flex justify-around">
-              <div
+              <div id="moin"
                 class="transition-all duration-[200ms] hover:scale-[1.05] cursor-pointer w-4 h-4 text-xl font-mono text-gray-400 flex justify-center items-center mt-1 border-[1px] m-[0_15px]"
               >
                 -
               </div>
-              <h4>1</h4>
-              <div
+              <h4 id="valueshow">1</h4>
+              <div id="plus"
                 class="transition-all duration-[200ms] hover:scale-[1.05] cursor-pointer w-4 h-4 text-xl font-mono text-gray-400 flex justify-center items-center mt-1 border-[1px] m-[0_15px]"
               >
                 +
               </div>
             </div>
             <div
-              class="flex justify-around items-center bg-teal-600 h-5  w-[45%] rounded-[6px] text-[12px] mr-2 text-white transition-all duration-[400ms] cursor-pointer hover:scale-[1.05] hover:bg-teal-900 p-3"
+              class="flex justify-around items-center bg-teal-600 w-[45%] rounded-[6px] text-[12px] mr-2 text-white transition-all duration-[400ms] cursor-pointer hover:scale-[1.05] hover:bg-teal-900 p-3"
             >
               <h3>Add To Cart</h3>
               <i class="fa-solid fa-bag-shopping"></i>
             </div>
           </div>
-          </div>
+        </div>
 
        
         </div>
