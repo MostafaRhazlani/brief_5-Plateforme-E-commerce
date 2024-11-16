@@ -290,45 +290,36 @@
           
         </div>
         <!-------------- Page Croasel ------------>
-        <div class="flex items-center justify-center space-x-2 mt-10">
+        <!-------------- Page Croasel ------------>
+        <div id="pagination" class="flex items-center justify-center space-x-2 mt-10">
           <!-- Page Numbers -->
-          <button
-          class="w-12 h-12  text-xl flex items-center rotate-180 justify-center bg-teal-500 text-white rounded-full hover:bg-teal-600 hover:scale-[1.05]"
-        >
-          <i class="fa-solid fa-angle-right"></i>
-        </button>
-          <button onclick="changepage(i)"
+
+          <button onclick="changepage(0)"
             class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-teal-500 text-teal-500 text-xl font-semibold"
           >
             1
           </button>
-          <button onclick="changepage(i)"
+          <button onclick="changepage(1)"
             class="w-12 h-12 text-xl flex items-center justify-center text-gray-700 font-semibold hover:text-teal-500"
           >
             2
           </button>
-          <button onclick="changepage(i)"
+          <button onclick="changepage(2)"
             class="w-12 h-12 text-xl flex items-center justify-center text-gray-700 font-semibold hover:text-teal-500"
           >
             3
           </button>
-          <button onclick="changepage(i)"
+          <button onclick="changepage(3)"
             class="w-12 h-12 text-xlflex items-center justify-center text-gray-700 font-semibold hover:text-teal-500"
           >
             4
           </button>
-          <button onclick="changepage(i)"
+          <button onclick="changepage(4)"
             class="w-12 h-12 text-xl flex items-center justify-center text-gray-700 font-semibold hover:text-teal-500"
           >
             5
           </button>
 
-          <!-- Next Arrow -->
-          <button
-            class="w-12 h-12 text-xl flex items-center justify-center bg-teal-500 text-white rounded-full hover:bg-teal-600"
-          >
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
         </div>
       </div>
     </section>
@@ -482,8 +473,8 @@
     </div>
         <!-- <div class="loader fixed top-0 left-0 w-full h-full flex justify-center items-center bg-white"></div> -->
     <script src="../source/js/main.js"></script>
-    <script src="../source/js/product.js"></script>
-    <script src="../source/js/affichageProduct.js"></script>
+    <script src="../source/js/affichageProduct.js">
+    </script><script src="../source/js/product.js"></script>
     <script src="../source/js/addToCard.js"></script>
   </body>
 </html>

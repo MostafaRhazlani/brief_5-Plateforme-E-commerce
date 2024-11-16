@@ -1,9 +1,10 @@
-let card = document.getElementById("card");
+
+let card = document.getElementById("casual");
 let left = document.getElementById("leftsc");
 let right = document.getElementById("rightsc");
 
 card.addEventListener("wheel",(evt)=>{
-   
+
     card.scrollLeft += evt.deltaY;
 });
 
@@ -26,4 +27,3 @@ window.addEventListener("load",()=>{
 
     })
 })
-
