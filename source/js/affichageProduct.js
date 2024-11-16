@@ -3,6 +3,33 @@ let products;
 let filtrdata;
 let page;
 let productsContainer = document.getElementById("container");
+ function addtoCartButt(){
+      // button to add product to modal shop
+   const addToCard = document.querySelectorAll('.add-to-card');
+
+   addToCard.forEach(btnAdd => {
+
+       btnAdd.addEventListener('click', () => {
+
+           let addToLocal = localCards;
+
+           let moveToCard = btnAdd.dataset.id
+
+           for (card of localCards) {
+               if (card == moveToCard) {
+                   return;
+               }
+           }
+
+           addToLocal.unshift(moveToCard)
+           localStorage.setItem('addCardsToLocal', JSON.stringify(addToLocal))
+           localCards = addToLocal
+           shopCards();
+
+       })
+   })
+
+ }
 
 fetch("/source/api/products.json")
 .then(res => res.json())
@@ -18,31 +45,8 @@ fetch("/source/api/products.json")
         updatePagination();
     }
 
-    // button to add product to modal shop
-    const addToCard = document.querySelectorAll('.add-to-card');
-
-    addToCard.forEach(btnAdd => {
-
-        btnAdd.addEventListener('click', () => {
-
-            let addToLocal = localCards;
-
-            let moveToCard = btnAdd.dataset.id
-
-            for (card of localCards) {
-                if (card == moveToCard) {
-                    return;
-                }
-            }
-
-            addToLocal.unshift(moveToCard)
-            localStorage.setItem('addCardsToLocal', JSON.stringify(addToLocal))
-            localCards = addToLocal
-            shopCards();
-
-        })
-    })
-    shopCards();
+    addtoCartButt()
+    shopCards()
 })
 
 // get data from local to 
@@ -143,7 +147,8 @@ function updatePagination() {
 async function fetchProducts(filtrdata, page = 0) {
           
         for (i = 6 * page; i < (page + 1) * 6; i++) {
-            console.log(filtrdata[i].sides[0])
+         if(filtrdata[i]){
+        
             let product = `
             <div class="w-full mx-auto bg-white rounded-[20px] title-4 py-7 px-3 shadow-lg">
                 <div
@@ -218,7 +223,9 @@ async function fetchProducts(filtrdata, page = 0) {
 
             `
             productsContainer.insertAdjacentHTML('afterbegin', product)
+         }
     }
+    addtoCartButt();
 }
 
 function Fillter(value){
@@ -238,7 +245,7 @@ function Fillter(value){
 
     fetchProducts(filtrdata)
     updatePagination();
-    shopCards();
+    addtoCartButt();
 
 }
 
