@@ -47,7 +47,8 @@
         "model": "Air Max 95",
         "price": 120.99,
         "release_date": "2024-03-15",
-        "gender": ["Men", "Women"]
+        "gender": ["Men", "Women"],
+        "rating": 4.5
       },
       {
         "id": 2,
@@ -93,7 +94,8 @@
         "model": "Air Max Plus",
         "price": 180.59,
         "release_date": "2024-04-01",
-        "gender": ["Men", "Women"]
+        "gender": ["Men", "Women"],
+        "rating": 4.8
       },
       {
         "id": 3,
@@ -139,7 +141,8 @@
         "model": "Air Max SC",
         "price": 110.99,
         "release_date": "2024-02-20",
-        "gender": ["Men", "Women"]
+        "gender": ["Men", "Women"],
+        "rating": 3.8
       },
       {
         "id": 4,
@@ -170,10 +173,12 @@
         "model": "Cobra",
         "price": 80.99,
         "release_date": "2024-01-10",
-        "gender": ["Men", "Women"]
+        "gender": ["Men", "Women"],
+        "rating":3.2
       },
       {
         "id": 5,
+        "rating":3.5,
         "name": "Adidas Zoom Vomero 5",
         "description": "The Adidas Zoom Vomero 5 All Star combines a timeless look with everyday comfort.",
         "image": "/source/api/Images/Adidas Zoom Vomero 5/Color1/Main Image.png",
@@ -205,6 +210,7 @@
       },
       {
         "id": 6,
+        "rating":4.2,
         "name": "Fila G.T. HUSTLE ACADEMY",
         "description": "Iconic and timeless, the Fila G.T. HUSTLE ACADEMY is made for all-day wear with a comfortable and stylish fit.",
         "image": "/source/api/Images/Fila G.T. HUSTLE ACADEMY/Color1/Main Image.png",
@@ -236,6 +242,7 @@
       },
       {
         "id": 7,
+        "rating":4.5,
         "name": "Jordan Air Jordan",
         "description": "The Jordan Air Jordan offers sleek, modern styling with responsive cushioning for all-day comfort.",
         "image": "/source/api/Images/Jordan Air Jordan/Color1/Main Image.png",
@@ -267,6 +274,7 @@
       },
       {
         "id": 8,
+        "rating":4.1,
         "name": "Jordan Max DN",
         "description": "The Jordan Max DN sneakers offer a retro look and feel with a sleek leather upper.",
         "image": "/source/api/Images/Jordan Max DN/Color1/Main Image.png",
@@ -298,6 +306,7 @@
       },
       {
         "id": 9,
+        "rating":3.9,
         "name": "Reebok Air 95",
         "description": "The Air 95 by Reebok provides incredible comfort and responsiveness",
         "image": "/source/api/Images/Reebok Air 95/Color1/Main Image.png",
@@ -329,6 +338,7 @@
       },
       {
         "id": 10,
+        "rating":4.6,
         "name": "Reebok Air Dunk Low",
         "description": "Reebok Air Dunk Lows are lightweight sneakers with a retro design, perfect for everyday wear.",
         "image": "/source/api/Images/Reebok Air Dunk Low/Color1/Main Image.png",
@@ -360,6 +370,7 @@
       },
       {
         "id": 11,
+        "rating":4.7,
         "name": "Nike Air L56",
         "description": "The Nike Air L56 brings sleek design with lightweight cushioning and a responsive feel.",
         "image": "/source/api/Images/Nike Air L56/Color1/Main Image.png",
@@ -391,6 +402,7 @@
       },
       {
         "id": 12,
+        "rating":4.4,
         "name": "Nike Air Nike Off",
         "description": "The Nike Air Nike Off features the iconic side stripe and is perfect for both skateboarding and casual wear.",
         "image": "/source/api/Images/Nike Air Nike Off/Color1/Main Image.png",
@@ -422,6 +434,7 @@
       },
       {
         "id": 13,
+        "rating":4.2,
         "name": "Vans Dunk Low Twist",
         "description": "The Vans Dunk Low Twist offers superior cushioning and comfort with a stylish, retro design.",
         "image": "/source/api/Images/Vans Dunk Low Twist/Color1/Main Image.png",
@@ -453,6 +466,7 @@
       },
       {
         "id": 14,
+        "rating":4.9,
         "name": "Nike G.T. Hustle Academy",
         "description": "Nike G.T. Hustle Academy is known for its chunky design, combining retro aesthetics with modern comfort.",
         "image": "/source/api/Images/Nike G.T. Hustle Academy/Color1/Main Image.png",
@@ -484,6 +498,7 @@
       },
       {
         "id": 15,
+        "rating":3.5,
         "name": "Puma Flat S",
         "description": "The Puma Flat S is built for skateboarding with a padded tongue and responsive cushioning.",
         "image": "/source/api/Images/Puma Flat S/Color1/Main Image.png",
@@ -515,6 +530,7 @@
       },
       {
         "id": 16,
+        "rating":4.3,
         "name": "Puma Sander",
         "description": "The Puma Sander combines stylish design with unparalleled comfort and a prime knit",
         "image": "/source/api/Images/Puma Sander/Color1/Main Image.png",
@@ -546,6 +562,7 @@
       },
       {
         "id": 17,
+        "rating":4.9,
         "name": "Puma V2K RUN2",
         "description": "The Puma V2K RUN2 combines high-quality materials and classic design",
         "image": "/source/api/Images/Puma V2K RUN2/Color1/Main Image.png",
@@ -577,6 +594,7 @@
       },
       {
         "id": 18,
+        "rating":4.6,
         "name": "Adidas Dunk Low",
         "description": "The Adidas Dunk Low delivers superior traction and cushioning, designed for on-court performance.",
         "image": "/source/api/Images/Adidas Dunk Low/Color1/Main Image.png",
@@ -608,6 +626,7 @@
       },
       {
         "id": 19,
+        "rating":3.9,
         "name": "Jordan Flat Legacy",
         "description": "The Jordan Flat Legacy brings classic styling with modern-day comfort.",
         "image": "/source/api/Images/Jordan Flat Legacy/Color1/Main Image.png",
@@ -639,6 +658,7 @@
       },
       {
         "id": 20,
+        "rating":4.7,
         "name": "Nike Court Vision MID WNTR",
         "description": "The Nike Court Vision MID WNTR is known for its bulky silhouette and high-fashion, luxury design.",
         "image": "/source/api/Images/Nike Court Vision MID WNTR/Color1/Main Image.png",
@@ -666,10 +686,11 @@
         "model": "Court Vision MID WNTR",
         "price": 900.99,
         "release_date": "2022-09-15",
-        "gender": ["Men"]
+        "gender": ["Men","Running"]
       },
       {
         "id": 21,
+        "rating":4.5,
         "name": "Nike Dunk BG",
         "description": "The Nike Dunk BG offers a classic retro basketball look with modern-day comfort.",
         "image": "/source/api/Images/Nike Dunk BG/Color1/Main Image.png",
@@ -697,10 +718,11 @@
         "model": "Dunk BG",
         "price": 100.99,
         "release_date": "2022-08-01",
-        "gender": ["Women"]
+        "gender": ["Women","Work & Safety"]
       },
       {
         "id": 22,
+        "rating":4.5,
         "name": "Reebok V2K Run",
         "description": "The Reebok V2K Run is a classic sneaker, known for its iconic shell toe and premium leather upper.",
         "image": "/source/api/Images/Reebok V2K Run/Color1/Main Image.png",
@@ -728,10 +750,11 @@
         "model": "V2K Run",
         "price": 85.99,
         "release_date": "2022-07-10",
-        "gender": ["Men", "Women"]
+        "gender": ["Men", "Women","Sport"]
       },
       {
         "id": 23,
+        "rating":4.1,
         "name": "Vans Sk8-Hi",
         "description": "The Vans Sk8-Hi offers durable canvas with the iconic high-top silhouette for style and comfort.",
         "image": "/source/api/Images/Vans Sk8-Hi/Color1/Main Image.png",
@@ -759,7 +782,7 @@
         "model": "Sk8-Hi",
         "price": 70.99,
         "release_date": "2022-06-01",
-        "gender": ["Men"]
+        "gender": ["Men","Work & Safety"]
       }
     ]
   }
