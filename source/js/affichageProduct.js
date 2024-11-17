@@ -148,7 +148,6 @@ async function fetchProducts(filtrdata, page = 0) {
           
         for (i = 6 * page; i < (page + 1) * 6; i++) {
          if(filtrdata[i]){
-        
             let product = `
             <div class="w-full mx-auto bg-white rounded-[20px] title-4 py-7 px-3 shadow-lg">
                 <div
@@ -227,7 +226,7 @@ async function fetchProducts(filtrdata, page = 0) {
     }
     addtoCartButt();
 }
-
+//filtrage category
 function Fillter(value){
     let naval = document.querySelectorAll('.naval');
 
@@ -248,7 +247,22 @@ function Fillter(value){
     addtoCartButt();
 
 }
+window.onload = () =>{
+    Fillter('all');
 
+  };
+  //search Product
+
+let searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', (vlue) => {
+    let searchValue = vlue.target.value.toLowerCase();
+    filtrdata = products.filter(product =>
+        product.name.toLowerCase().includes(searchValue)
+    );
+    productsContainer.innerHTML = '';
+    fetchProducts(filtrdata);
+    updatePagination();
+});
 
 async function fetchCasualProducts() {
     fetch("/source/api/products.json")
