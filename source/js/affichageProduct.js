@@ -300,39 +300,66 @@ sort.addEventListener("change",()=>{
    
 });
 //max et min price
-let maxpriceshow = document.getElementById("maxpriceshow");
-let minprice = document.getElementById("minprice");
-let maxprice = document.getElementById("maxprice");
-let rest = document.getElementById("rest");
+// let maxpriceshow = document.getElementById("maxpriceshow");
+// let minprice = document.getElementById("minprice");
+// let maxprice = document.getElementById("maxprice");
+// let rest = document.getElementById("rest");
 
-function filterProductsByPrice(min, max) {
-  let filtr = products.filter(product => 
-      product.price >= min && product.price <= max
-  );
-  fetchProducts(filtr,0);
-}
+// function filterProductsByPrice(min, max) {
+//   let filtr = products.filter(product => 
+//       product.price >= min && product.price <= max
+//   );
+//   fetchProducts(filtr,0);
+// }
 
-let maxProductPrice = Math.max(products.map(p => p.price));
-maxpriceshow.textContent = `$${maxProductPrice.toFixed(2)}`;
-maxprice.value = maxProductPrice;
+// let maxProductPrice = Math.max(products.map(p => p.price));
+// maxpriceshow.textContent = `$${maxProductPrice.toFixed(2)}`;
+// maxprice.value = maxProductPrice;
 
-minprice.addEventListener("input", () => {
-  let min = parseFloat(minprice.value) || 0;
-  let max = parseFloat(maxprice.value) || maxProductPrice;
-  filterProductsByPrice(min, max);
-});
-maxprice.addEventListener("input", () => {
-  let min = parseFloat(minprice.value) || 0;
-  let max = parseFloat(maxprice.value) || maxProductPrice;
-  filterProductsByPrice(min, max);
-});
+// minprice.addEventListener("input", () => {
+//   let min = parseFloat(minprice.value) || 0;
+//   let max = parseFloat(maxprice.value) || maxProductPrice;
+//   filterProductsByPrice(min, max);
+// });
+// maxprice.addEventListener("input", () => {
+//   let min = parseFloat(minprice.value) || 0;
+//   let max = parseFloat(maxprice.value) || maxProductPrice;
+//   filterProductsByPrice(min, max);
+// });
 
 rest.addEventListener("click", () => {
   minprice.value = 0;
   maxprice.value = maxProductPrice;
-  filterProductsByPrice(0, maxProductPrice);
+ 
 });
 
+minprice.addEventListener('input', () => {
+    let minPriceValue = minprice.value;
+    let maxPriceValue = maxprice.value;
+    filtrdata = products.filter(product => product.price >= minPriceValue && product.price <= maxPriceValue);
+    productsContainer.innerHTML = "";
+    fetchProducts(filtrdata);
+    updatePagination();
+});
+
+maxprice.addEventListener('input', () => {
+    let minPriceValue = minprice.value;
+    let maxPriceValue = maxprice.value;
+    filtrdata = products.filter(product => product.price >= minPriceValue && product.price <= maxPriceValue);
+    productsContainer.innerHTML = "";
+    fetchProducts(filtrdata);
+    updatePagination();
+});
+window.onload = () => {
+    let maxPrice = Math.max(...products.map(product => product.price));
+    maxpriceshow.textContent = `$${maxPrice}`;
+    maxprice.setAttribute('max', maxPrice);
+};
+rest.addEventListener("click", () => {
+    minprice.value = 0;
+    maxprice.value = 0;
+    filterProductsByPrice(0, 0);
+  });
 async function fetchCasualProducts() {
     fetch("/source/api/products.json")
         .then(res => res.json())
