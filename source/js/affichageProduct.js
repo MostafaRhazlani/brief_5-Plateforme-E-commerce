@@ -299,7 +299,34 @@ sort.addEventListener("change",()=>{
     updatePagination();
    
 });
+//max et min price
+minprice.addEventListener('input', () => {
+    let minPriceValue = minprice.value;
+    let maxPriceValue = maxprice.value;
+    filtrdata = products.filter(product => product.price >= minPriceValue && product.price <= maxPriceValue);
+    productsContainer.innerHTML = "";
+    fetchProducts(filtrdata);
+    updatePagination();
+});
 
+maxprice.addEventListener('input', () => {
+    let minPriceValue = minprice.value;
+    let maxPriceValue = maxprice.value;
+    filtrdata = products.filter(product => product.price >= minPriceValue && product.price <= maxPriceValue);
+    productsContainer.innerHTML = "";
+    fetchProducts(filtrdata);
+    updatePagination();
+});
+window.onload = () => {
+    let maxPrice = Math.max(...products.map(product => product.price));
+    maxpriceshow.textContent = `$${maxPrice}`;
+    maxprice.setAttribute('max', maxPrice);
+};
+rest.addEventListener("click", () => {
+    minprice.value = 0;
+    maxprice.value = 0;
+    filterProductsByPrice(0, 0);
+  });
 async function fetchCasualProducts() {
     fetch("/source/api/products.json")
         .then(res => res.json())
