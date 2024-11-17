@@ -3,6 +3,14 @@ let products;
 let filtrdata;
 let page;
 let productsContainer = document.getElementById("container");
+const alerts = document.getElementById('alerts');
+
+if (!localStorage.getItem('favList')) {
+    localStorage.setItem('favList', '-');
+}
+
+let localItems = []
+
 // Notification message
 function showNotification(message) {
     let notif = document.getElementById("notification");
@@ -188,9 +196,11 @@ async function fetchProducts(filtrdata, page = 0) {
                             />
                         </div>
                     <div class="text-center">
-                    <i
-                        class="fa-regular fa-heart transition-all duration-[200ms] cursor-pointer hover:scale-[1.05] mt-4"
-                    ></i>
+                        <button type="button" class="favorite-btn" data-id="${filtrdata[i].id}" data-name="${filtrdata[i].name}">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart fill-teal-400 w-5 h-5" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                            </svg>
+                        </button>
                     </div>
                 </div> <a href="../pages/shop.html?id=${filtrdata[i].id}">
                 <h2 class="mt-32 lg:mt-0 lg:font-sans font-bold text-center" id="filtr">${filtrdata[i].name}</h2></a>
@@ -232,11 +242,58 @@ async function fetchProducts(filtrdata, page = 0) {
 
             `
             productsContainer.innerHTML += product;
-         }
+
+        }
+        productsContainer.querySelectorAll('.favorite-btn').forEach(btn => {
+            btn.addEventListener('click', addProductToFavorite)
+        })
     }
     addtoCartButt();
     Quantity();
 }
+
+function addProductToFavorite() {
+    let id = this.dataset.id;
+    let name = this.dataset.name;
+    if (!localStorage.getItem('favList')) {
+        localStorage.setItem('favList', '-');
+    }
+    if (this.classList.contains('added-fav')) {
+        this.classList.remove('added-fav');
+        this.innerHTML = 
+        `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart fill-teal-400 w-5 h-5" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+        </svg>`;
+        localStorage.setItem('favList', localStorage.getItem('favList').replace('-' + id + '-', '-'))
+        createAlert(name, 'Removed from favorite');
+    } else {
+        this.classList.add('added-fav');
+        this.innerHTML = 
+        `<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-heart-fill fill-red-500 w-5 h-5" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"></path>
+        </svg>`;
+        localStorage.setItem('favList', `-${id}${localStorage.getItem('favList')}`)
+        createAlert(name, 'Added to favorite');
+    }
+}
+
+function createAlert(title, msg) {
+    let div = document.createElement('div');
+    div.className = 'animated-alert-fadein w-80 bg-gray-700 text-white p-4 rounded-lg text-center shadow-xl mt-3';
+    div.innerHTML = 
+    `<h2 class="mb-2 text-lg font-bold">${title}</h2>
+    <p>${msg}</p>`;
+    alerts.append(div);
+
+    setTimeout(() => {
+        div.classList.remove('animated-alert-fadein')
+        div.classList.add('animated-alert-fadeout')
+    }, 3000)
+    setTimeout(() => {
+        div.remove();
+    }, 3450)
+}
+
 //filtrage category
 function Fillter(value){
     let naval = document.querySelectorAll('.naval');
