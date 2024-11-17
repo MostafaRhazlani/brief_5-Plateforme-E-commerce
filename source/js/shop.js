@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainImage = document.getElementById('mainImage');
     const thumbnailsStrip = document.querySelector('.thumbnails-strip');
     const scrollContainer = document.getElementById('scrollContainer');
+    const addedProducts = document.querySelector('.added-products');
     
     const url = window.location.href;
-    const sneakerId = url.split('#').pop();
+    const sneakerId = url.split('?id=').pop();
 
     const sneakerTitle = document.querySelector('.product-info h1');
     const sneakerPrice = document.getElementById('price');
@@ -89,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
             sneakerPrice.textContent = `$${sneaker.price.toFixed(2)}`;
         }
     }
-    function colorx(sneakerId){
+    function colorx(sneakerItem){
         colorThumbnails.forEach((thumbnail, index) => {
-            if (sneakerId.sides[index]) {
-                thumbnail.src = sneakerId.sides[index].main;
+            if (sneakerItem.sides[index]) {
+                thumbnail.src = sneakerItem.sides[index].main;
             }
             
             thumbnail.addEventListener('click', function() {
@@ -102,37 +103,72 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 this.closest('div').classList.add('border-teal-500');
                 
-                if (mainImage && sneakerId.sides[index]) {
-                    mainImage.src = sneakerId.sides[index].main;
-                    updateSideViews(sneakerId.sides[index].Images);
+                if (mainImage && sneakerItem.sides[index]) {
+                    mainImage.src = sneakerItem.sides[index].main;
+                    updateSideViews(sneakerItem.sides[index].Images);
                 }
             });
         });
     }
 
+
     fetch('/source/api/products.json')
         .then(response => response.json())
         .then(data => {
+
+            let sneakerData = data.data.sneakers
             const sneaker = data.data.sneakers.find(s => s.id.toString() === sneakerId);
+            
             
             if (!sneaker) {
                 console.error('Sneaker not found');
                 return;
             }
             
-            updateProductInfo(sneaker);
+            let localCards = JSON.parse(localStorage.getItem('addCardsToLocal')) || []
+
+            sneakerData.forEach(data => {
+
+                for (let i = 0; i < localCards.length; i++) {
+                    const element = localCards[i];
+                    
+                    if(data.id == element) {
+                        addedProducts.innerHTML += `<div class="h-[190px] md:h-[360px] w-fit grid grid-rows-3 contain-content rounded-lg">
+                        <div class="row-span-2 flex items-center justify-center">
+                            <img src="${data.image}" class="w-fit h-fit object-contain" alt="">
+                        </div>
+                        <div
+                            class=" bg-gradient-to-t from-zinc-800 to-gray-400 text-zinc-300 flex flex-col items-start pl-2 justify-center sm:h-fit md:h-auto ">
+                            <a href="../pages/shop.html?id=${data.id}">
+                                <h2 class="text-xs sm:text-sm md:text-2xl">${data.name}</h2>
+                            </a>
+                            <h2 class="TT p-0 text-xs sm:text-sm md:text-xl md:text-wrap  ">Club Fleece
+                                Pantalon de jogging pour ado</h2>
+                            <h2 class="text-xs sm:text-sm md:text-2xl">$${data.price}</h2>
+                        </div>
+                    </div>`
+                    }
+                }
+            })
             
+            
+            updateProductInfo(sneaker);
+
             // Update the sneakers section with same brand sneakers
             updateModelSneakers(data.data.sneakers, sneaker.brand);
             colorx(sneaker)
-           
-
+            
+            console.log(sneaker);
+            
+            
             if (sneaker.sides[0]) {
                 if (mainImage) {
                     mainImage.src = sneaker.sides[0].main;
                 }
                 updateSideViews(sneaker.sides[0].Images);
             }
+            
+            
         })
         .catch(error => {
             console.error('Error loading sneaker data:', error);
