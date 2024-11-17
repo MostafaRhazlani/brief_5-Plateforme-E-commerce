@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const thumbnailItem = document.createElement('div');
             thumbnailItem.className = 'thumbnail-item object-contain cursor-pointer';
             thumbnailItem.innerHTML = `
-                <div class="thumbnail-container object-contain sm:w-[126px] sm:h-[95px] bg-gray-100 rounded-lg flex items-center justify-center scroll-snap-start">
+                <div class="thumbnail-container object-contain sm:w-[126px] sm:h-[95px] bg-gray-100 rounded-lg flex items-center justify-center scroll-snap-start overflow-hidden">
                     <img src="${imageSrc}" alt="Side View" 
                          class="w-[90px] object-contain transform overflow-hidden">
                 </div>
@@ -52,15 +52,29 @@ document.addEventListener('DOMContentLoaded', function() {
             
             scrollItem.innerHTML = `
                 <div class="min-w-[262px] h-[195px] bg-gray-100 rounded-lg flex items-center justify-center">
-                  <a href="../pages/shop.html#${sneaker.id}">  <img src="${sneaker.image}" alt="${sneaker.name}"
-                        class="w-full h-full object-contain cursor-pointer p-4"></a>
+                 <img src="${sneaker.image}" alt="${sneaker.name}"
+                        class="w-full h-full object-contain cursor-pointer p-4">
                 </div>
             `;
     
-            // scrollItem.addEventListener('click', () => {
-            //     window.location.href = `#${sneaker.id}`;
-            //     updateSideViews(sideImages);
-            // });
+           scrollItem.addEventListener('click', () => {
+                window.location.href = `#${sneaker.id}`;
+
+                const selectSneaker = sneakers.find(a => a.id === sneaker.id)
+
+                if(selectSneaker) {
+                    updateProductInfo(selectSneaker);
+                    updateSideViews(selectSneaker.sides[0].Images)
+
+                    if(mainImage) {
+                        mainImage.src = selectSneaker.sides[0].main
+                    }
+
+                    updateModelSneakers(sneakers, selectSneaker.brand)
+                   
+                    colorx(selectSneaker)
+                }
+            });
     
             scrollContainer.appendChild(scrollItem);
             
@@ -74,6 +88,26 @@ document.addEventListener('DOMContentLoaded', function() {
         if (sneakerPrice) {
             sneakerPrice.textContent = `$${sneaker.price.toFixed(2)}`;
         }
+    }
+    function colorx(sneakerId){
+        colorThumbnails.forEach((thumbnail, index) => {
+            if (sneakerId.sides[index]) {
+                thumbnail.src = sneakerId.sides[index].main;
+            }
+            
+            thumbnail.addEventListener('click', function() {
+                colorThumbnails.forEach(thumb => {
+                    thumb.closest('div').classList.remove('border-teal-500');
+                });
+                
+                this.closest('div').classList.add('border-teal-500');
+                
+                if (mainImage && sneakerId.sides[index]) {
+                    mainImage.src = sneakerId.sides[index].main;
+                    updateSideViews(sneakerId.sides[index].Images);
+                }
+            });
+        });
     }
 
     fetch('/source/api/products.json')
@@ -90,25 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update the sneakers section with same brand sneakers
             updateModelSneakers(data.data.sneakers, sneaker.brand);
-            
-            colorThumbnails.forEach((thumbnail, index) => {
-                if (sneaker.sides[index]) {
-                    thumbnail.src = sneaker.sides[index].main;
-                }
-                
-                thumbnail.addEventListener('click', function() {
-                    colorThumbnails.forEach(thumb => {
-                        thumb.closest('div').classList.remove('border-teal-500');
-                    });
-                    
-                    this.closest('div').classList.add('border-teal-500');
-                    
-                    if (mainImage && sneaker.sides[index]) {
-                        mainImage.src = sneaker.sides[index].main;
-                        updateSideViews(sneaker.sides[index].Images);
-                    }
-                });
-            });
+            colorx(sneaker)
+           
 
             if (sneaker.sides[0]) {
                 if (mainImage) {
