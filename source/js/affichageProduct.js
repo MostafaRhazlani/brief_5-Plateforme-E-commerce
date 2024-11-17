@@ -231,7 +231,7 @@ async function fetchProducts(filtrdata, page = 0) {
                 </div>
 
             `
-            productsContainer.insertAdjacentHTML('afterbegin', product)
+            productsContainer.innerHTML += product;
          }
     }
     addtoCartButt();
@@ -280,16 +280,16 @@ sort.addEventListener("change",()=>{
     let sprud;
     switch(svalue){
         case "featured":
-            sprud = products.findIndex(p => p.id === a.id) - products.findIndex(p => p.id === b.id);
+            sprud = filtrdata.sort((a,b)=>a.id - b.id);
             break;
         case "alpha":
-            sprud = products.sort((a,b)=>a.name.localeCompare(b.name));
+            sprud = filtrdata.sort((a,b)=>a.name.localeCompare(b.name));
             break;
         case "lowhight":
-            sprud = products.sort((a,b)=>a.price - b.price);
+            sprud = filtrdata.sort((a,b)=>a.price - b.price);
             break;
          case "hightlow":
-            sprud = products.sort((a,b)=>b.price - a.price);
+            sprud = filtrdata.sort((a,b)=>b.price - a.price);
             break;
                     
     }
@@ -297,10 +297,7 @@ sort.addEventListener("change",()=>{
     productsContainer.innerHTML = '';
     fetchProducts(sprud, 0);
     updatePagination();
-    let paginationButtons = pagination.getElementsByTagName('button');
-    if (paginationButtons.length > 0) {
-        changepage(0);
-    }
+   
 });
 
 async function fetchCasualProducts() {
