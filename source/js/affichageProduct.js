@@ -84,7 +84,7 @@ function shopCards() {
                         </div>
                         <div class="w-full flex justify-between">
                             <div class="flex flex-col mr-2">
-                            <a href="../pages/shop.html#${product.id}"><p class="font-semibold text-xl">${product.name}</p></a>
+                            <a href="../pages/shop.html?id=${product.id}"><p class="font-semibold text-xl">${product.name}</p></a>
                             <div class="text-yellow-400">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -192,7 +192,7 @@ async function fetchProducts(filtrdata, page = 0) {
                         class="fa-regular fa-heart transition-all duration-[200ms] cursor-pointer hover:scale-[1.05] mt-4"
                     ></i>
                     </div>
-                </div> <a href="../pages/shop.html#${filtrdata[i].id}">
+                </div> <a href="../pages/shop.html?id=${filtrdata[i].id}">
                 <h2 class="mt-32 lg:mt-0 lg:font-sans font-bold text-center" id="filtr">${filtrdata[i].name}</h2></a>
                 <div class="flex justify-between mt-4">
                     <h3 class="ml-3 text-gray-500" id="unit">1 UNIT</h3>
