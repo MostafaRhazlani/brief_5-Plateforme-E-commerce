@@ -159,34 +159,34 @@ async function fetchProducts(filtrdata, page = 0) {
         for (i = 6 * page; i < (page + 1) * 6; i++) {
          if(filtrdata[i]){
             let product = `
-            <div class="w-full mx-auto bg-white rounded-[20px] title-4 py-7 px-3 shadow-lg">
+            <div class="w-full mx-auto cards bg-white rounded-[20px] title-4 py-7 px-3 shadow-lg">
                 <div
                     class="grid grid-cols-[20%_60%_20%] grid-rows-[140px] bg-white rounded-[20px]"
                 >
-                    <div class="flex flex-col justify-around items-center">
-                    <img id="img"
-                        src="${filtrdata[i].sides[0].main}"
-                        class="rotate-[-45deg] w-[80%] transition-all duration-[200ms] cursor-pointer lg:hover:scale-[1.05] scale-[0.75] lg:scale-[0.75] hover:scale-[0.9]"
-                        alt=""
-                    />
-                    <img id="img"
-                        src="${filtrdata[i].sides[1].main}"
-                        class="rotate-[-45deg] translate-y-[-5px] w-[80%] transition-all duration-[200ms] cursor-pointer lg:hover:scale-[1.05] scale-[0.75] lg:scale-[0.75] hover:scale-[0.9]"
-                        alt=""
-                    />
-                    <img id="img"
-                        src="${filtrdata[i].sides[2].main}"
-                        class="rotate-[-45deg] translate-y-[-15px] w-[80%] transition-all duration-[200ms] cursor-pointer lg:hover:scale-[1.05] scale-[0.75] lg:scale-[0.75] hover:scale-[0.9]"
-                        alt=""
-                    />
-                    </div>
-                    <div class="scale-[0.75] lg:scale-[1]">
-                        <img id="img"
-                            src="${filtrdata[i].image}"
+                     <div class="flex flex-col justify-around items-center">
+                            <img
+                            src="${products[i].sides[0].main}"
+                            class="rotate-[-45deg] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.08]"
+                            alt=""
+                            />
+                            <img
+                            src="${products[i].sides[1].main}"
+                            class="rotate-[-45deg] translate-y-[-5px] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.08]"
+                            alt=""
+                            />
+                            <img
+                            src="${products[i].sides[2].main}"
+                            class="rotate-[-45deg] translate-y-[-15px] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.08]"
+                            alt=""
+                            />
+                        </div>
+                        <div class="">
+                            <img
+                            src="${products[i].sides[2].main}"
                             class="rotate-[-45deg] translate-x-[-10px] translate-y-[-30px] w-[95%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
                             alt=""
-                        />
-                    </div>
+                            />
+                        </div>
                     <div class="text-center">
                     <i
                         class="fa-regular fa-heart transition-all duration-[200ms] cursor-pointer hover:scale-[1.05] mt-4"
@@ -235,6 +235,7 @@ async function fetchProducts(filtrdata, page = 0) {
          }
     }
     addtoCartButt();
+    Quantity();
 }
 //filtrage category
 function Fillter(value){
@@ -259,7 +260,7 @@ function Fillter(value){
 }
 window.onload = () =>{
     Fillter('all');
-
+    
   };
   //search Product
 
@@ -325,8 +326,42 @@ window.onload = () => {
 rest.addEventListener("click", () => {
     minprice.value = 0;
     maxprice.value = 0;
-    filterProductsByPrice(0, 0);
-  });
+ });
+
+
+
+//   //moin and plus quantity
+
+function Quantity() {
+    const productContainers = document.querySelectorAll('.title-4');
+    
+    productContainers.forEach(container => {
+        const minusBtn = container.querySelector('#moin');
+        const plusBtn = container.querySelector('#plus');
+        const valueDisplay = container.querySelector('#valueshow');
+        
+        if (minusBtn && plusBtn && valueDisplay) {
+            let quantity = 1; 
+            const updateDisplay = () => {
+                valueDisplay.textContent = quantity;
+            };
+            minusBtn.addEventListener('click', () => {
+                if (quantity > 1) {
+                    quantity--;
+                    updateDisplay();
+                }
+            });
+            plusBtn.addEventListener('click', () => {
+                if (quantity < 10) { 
+                    quantity++;
+                    updateDisplay();
+                }
+            });
+            updateDisplay();
+        }
+    });
+}
+
 async function fetchCasualProducts() {
     fetch("/source/api/products.json")
         .then(res => res.json())
@@ -387,13 +422,13 @@ async function fetchCasualProducts() {
                         <div class="ml-3 font-sans font-medium mt-2">$${products[i].price}</div>
                         <div class="opps flex justify-between items-center mt-3">
                         <div class="flex justify-around">
-                            <div
+                            <div id="moin"
                             class="transition-all duration-[200ms] hover:scale-[1.05] cursor-pointer w-4 h-4 text-xl font-mono text-gray-400 flex justify-center items-center mt-1 border-[1px] m-[0_15px]"
                             >
                             -
                             </div>
-                            <h4>1</h4>
-                            <div
+                            <h4 id="valueshow">1</h4>
+                            <div id="plus"
                             class="transition-all duration-[200ms] hover:scale-[1.05] cursor-pointer w-4 h-4 text-xl font-mono text-gray-400 flex justify-center items-center mt-1 border-[1px] m-[0_15px]"
                             >
                             +
@@ -414,3 +449,7 @@ async function fetchCasualProducts() {
         })
 }
 fetchCasualProducts()
+window.onload = () =>{
+    Fillter('all');
+    
+  };
