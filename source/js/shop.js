@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
     const sneakerId = url.split('#').pop();
 
+    const sneakerTitle = document.querySelector('.product-info h1');
+    const sneakerPrice = document.getElementById('price');
+
     function updateSideViews(sideImages) {
         if (!thumbnailsStrip) return;
         
@@ -37,31 +40,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function updateModelSneakers(sneakers, currentModel) {
+    function updateModelSneakers(sneakers, currentBrand) {
         if (!scrollContainer) return;
         
         scrollContainer.innerHTML = '';
         
-        // Filter sneakers with the same model value
-        const modelSneakers = sneakers.filter(s => s.model && s.model.toLowerCase() === currentModel.toLowerCase());
+        const brandSneakers = sneakers.filter(s => s.brand && s.brand.toLowerCase() === currentBrand.toLowerCase());
         
-        modelSneakers.forEach((sneaker) => {
+        brandSneakers.forEach((sneaker) => {
             const scrollItem = document.createElement('div');
-            scrollItem.className = 'animate-scroll flex gap-5';
+            
             scrollItem.innerHTML = `
                 <div class="min-w-[262px] h-[195px] bg-gray-100 rounded-lg flex items-center justify-center">
-                    <img src="${sneaker.image}" alt="${sneaker.name}"
-                        class="w-full h-full object-contain p-4">
+                  <a href="../pages/shop.html#${sneaker.id}">  <img src="${sneaker.image}" alt="${sneaker.name}"
+                        class="w-full h-full object-contain cursor-pointer p-4"></a>
                 </div>
             `;
     
-            // Add click event to navigate to the sneaker
-            scrollItem.addEventListener('click', () => {
-                window.location.href = `#${sneaker.id}`;
-            });
+            // scrollItem.addEventListener('click', () => {
+            //     window.location.href = `#${sneaker.id}`;
+            //     updateSideViews(sideImages);
+            // });
     
             scrollContainer.appendChild(scrollItem);
+            
         });
+    }
+
+    function updateProductInfo(sneaker) {
+        if (sneakerTitle) {
+            sneakerTitle.textContent = sneaker.model;
+        }
+        if (sneakerPrice) {
+            sneakerPrice.textContent = `$${sneaker.price.toFixed(2)}`;
+        }
     }
 
     fetch('/source/api/products.json')
@@ -74,8 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Update the model sneakers section
-            updateModelSneakers(data.data.sneakers, sneaker.model);
+            updateProductInfo(sneaker);
+            
+            // Update the sneakers section with same brand sneakers
+            updateModelSneakers(data.data.sneakers, sneaker.brand);
             
             colorThumbnails.forEach((thumbnail, index) => {
                 if (sneaker.sides[index]) {
@@ -96,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            // Set initial state
             if (sneaker.sides[0]) {
                 if (mainImage) {
                     mainImage.src = sneaker.sides[0].main;
