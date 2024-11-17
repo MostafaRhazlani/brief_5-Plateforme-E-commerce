@@ -3,6 +3,15 @@ let products;
 let filtrdata;
 let page;
 let productsContainer = document.getElementById("container");
+// Notification message
+function showNotification(message) {
+    let notif = document.getElementById("notification");
+    notif.textContent = message;
+    notif.style.display = "block";
+    setTimeout(() => {
+      notif.style.display = "none";
+    }, 3000);
+  }
  function addtoCartButt(){
       // button to add product to modal shop
    const addToCard = document.querySelectorAll('.add-to-card');
@@ -25,6 +34,7 @@ let productsContainer = document.getElementById("container");
            localStorage.setItem('addCardsToLocal', JSON.stringify(addToLocal))
            localCards = addToLocal
            shopCards();
+           showNotification("The product has been successfully added to the cart! 🎉")
 
        })
    })
@@ -221,7 +231,7 @@ async function fetchProducts(filtrdata, page = 0) {
                 </div>
 
             `
-            productsContainer.insertAdjacentHTML('afterbegin', product)
+            productsContainer.innerHTML += product;
          }
     }
     addtoCartButt();
@@ -262,6 +272,32 @@ searchInput.addEventListener('input', (vlue) => {
     productsContainer.innerHTML = '';
     fetchProducts(filtrdata);
     updatePagination();
+});
+// sort elements by price low to hight , hight to low , a to z
+let sort = document.getElementById('sort');
+sort.addEventListener("change",()=>{
+    let svalue = document.getElementById('sort').value;
+    let sprud;
+    switch(svalue){
+        case "featured":
+            sprud = filtrdata.sort((a,b)=>a.id - b.id);
+            break;
+        case "alpha":
+            sprud = filtrdata.sort((a,b)=>a.name.localeCompare(b.name));
+            break;
+        case "lowhight":
+            sprud = filtrdata.sort((a,b)=>a.price - b.price);
+            break;
+         case "hightlow":
+            sprud = filtrdata.sort((a,b)=>b.price - a.price);
+            break;
+                    
+    }
+
+    productsContainer.innerHTML = '';
+    fetchProducts(sprud, 0);
+    updatePagination();
+   
 });
 
 async function fetchCasualProducts() {
