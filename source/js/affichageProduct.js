@@ -173,24 +173,24 @@ async function fetchProducts(filtrdata, page = 0) {
                 >
                      <div class="flex flex-col justify-around items-center">
                             <img
-                            src="${products[i].sides[0].main}"
+                            src="${filtrdata[i].sides[0].main}"
                             class="rotate-[-45deg] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.08]"
                             alt=""
                             />
                             <img
-                            src="${products[i].sides[1].main}"
+                            src="${filtrdata[i].sides[1].main}"
                             class="rotate-[-45deg] translate-y-[-5px] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.08]"
                             alt=""
                             />
                             <img
-                            src="${products[i].sides[2].main}"
+                            src="${filtrdata[i].sides[2].main}"
                             class="rotate-[-45deg] translate-y-[-15px] w-[80%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.08]"
                             alt=""
                             />
                         </div>
                         <div class="">
                             <img
-                            src="${products[i].sides[0].main}"
+                            src="${filtrdata[i].sides[0].main}"
                             class="rotate-[-45deg] translate-x-[-10px] translate-y-[-30px] w-[95%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
                             alt=""
                             />
