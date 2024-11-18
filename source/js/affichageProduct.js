@@ -190,20 +190,29 @@ async function fetchProducts(filtrdata, page = 0) {
                         </div>
                         <div class="">
                             <img
-                            src="${products[i].sides[2].main}"
+                            src="${products[i].sides[0].main}"
                             class="rotate-[-45deg] translate-x-[-10px] translate-y-[-30px] w-[95%] transition-all duration-[200ms] cursor-pointer hover:scale-[1.05]"
                             alt=""
                             />
                         </div>
                     <div class="text-center">
-                        <button type="button" class="favorite-btn" data-id="${filtrdata[i].id}" data-name="${filtrdata[i].name}">
+                    ${
+                        localStorage.getItem('favList').search(`-${filtrdata[i].id}-`) < 0 ? 
+                        `<button type="button" class="favorite-btn" data-id="${filtrdata[i].id}" data-name="${filtrdata[i].name}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart fill-teal-400 w-5 h-5" viewBox="0 0 16 16">
                                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
                             </svg>
-                        </button>
+                        </button>`:
+                        `<button type="button" class="favorite-btn added-fav" data-id="${filtrdata[i].id}" data-name="${filtrdata[i].name}">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-heart-fill fill-red-500 w-5 h-5" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"></path>
+                            </svg>
+                        </button>`
+                    }
+                        
                     </div>
                 </div> <a href="../pages/shop.html?id=${filtrdata[i].id}">
-                <h2 class="mt-32 lg:mt-0 lg:font-sans font-bold text-center" id="filtr">${filtrdata[i].name}</h2></a>
+                <h2 class="mt-32 lg:mt-0 lg:font-sans font-bold text-center relative z-10" id="filtr">${filtrdata[i].name}</h2></a>
                 <div class="flex justify-between mt-4">
                     <h3 class="ml-3 text-gray-500" id="unit">1 UNIT</h3>
                     <a id="rating" href="" class="flex font-bold justify-around mr-3"
